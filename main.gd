@@ -16,6 +16,6 @@ func game_over():
 
 func _process(delta):
 	if ($Insaneplayer.position.x - $Floor.position.x) > screen_size.x:
-		$Floor.position.x = $Floor.position.x + screen_size.x
+		$Floor.position.x = $Insaneplayer.position.x - 150
 		
 	
