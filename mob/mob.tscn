@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://h8b4f2kt570o"]
+
+[ext_resource type="Script" path="res://mob/mob.gd" id="1_xrnhp"]
+[ext_resource type="Texture2D" uid="uid://bm7dnrtqcw352" path="res://icon.svg" id="2_fj2qp"]
+[ext_resource type="Texture2D" uid="uid://hbb1oitsires" path="res://mob/iPhone-15-Pro-Max.png" id="3_wr7j4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rigjf"]
+size = Vector2(91, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xl2cl"]
+size = Vector2(46, 88)
+
+[node name="MOB" type="Area2D"]
+script = ExtResource("1_xrnhp")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-10, -10)
+
+[node name="Primercol" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-45.5, -45)
+shape = SubResource("RectangleShape2D_rigjf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Primercol"]
+position = Vector2(-0.5, 0)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("2_fj2qp")
+
+[node name="Iponecol" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-23, -45)
+shape = SubResource("RectangleShape2D_xl2cl")
+debug_color = Color(0.675306, 0.318368, 0.977423, 0.42)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Iponecol"]
+position = Vector2(-0.203122, -0.712734)
+scale = Vector2(0.309306, 0.329625)
+texture = ExtResource("3_wr7j4")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
