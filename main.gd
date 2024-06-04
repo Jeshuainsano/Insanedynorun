@@ -16,6 +16,8 @@ func new_game():
 	$MOBTimer.start()
 
 func game_over():
+	GHUD.mob_counter = 0
+	$MOBTimer.stop()
 	GHUD.update_highscore_label()
 
 func _process(delta):
@@ -23,9 +25,11 @@ func _process(delta):
 		
 	
 func _on_mob_timer_timeout():
-	var mob = mob_scene.instantiate()
-	mob.position.x = $Insaneplayer.position.x + 1500
-	mob.position.y = 602
-	add_child(mob)
-	mob.hit.connect(game_over)
-	$MOBTimer.wait_time = 1
+	if GHUD.mob_counter < 2:
+		var mob = mob_scene.instantiate()
+		mob.position.x = $Insaneplayer.position.x + 1500
+		mob.position.y = 602
+		add_child(mob)
+		mob.hit.connect(game_over)
+	print(GHUD.mob_counter)
+

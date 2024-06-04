@@ -164,13 +164,11 @@ sprite_frames = SubResource("SpriteFrames_8w6ee")
 animation = &"dash"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(20.5, 35.25)
 shape = SubResource("RectangleShape2D_rna31")
 disabled = true
 
-[node name="Run colision shape 2d" type="CollisionShape2D" parent="."]
-visible = false
+[node name="Runcolisionshape2d" type="CollisionShape2D" parent="."]
 position = Vector2(20, 13)
 shape = SubResource("RectangleShape2D_30ys1")
 debug_color = Color(0.944838, 0.236151, 1.92523e-07, 0.42)
