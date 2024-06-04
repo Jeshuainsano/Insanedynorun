@@ -13,28 +13,34 @@ size = Vector2(46, 88)
 [node name="MOB" type="Area2D"]
 script = ExtResource("1_xrnhp")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-10, -10)
-
-[node name="Primercol" type="CollisionShape2D" parent="."]
+[node name="bluecolission" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(-45.5, -45)
 shape = SubResource("RectangleShape2D_rigjf")
+disabled = true
+debug_color = Color(0.923759, 0.244796, 0.330617, 0.42)
 
-[node name="Sprite2D" type="Sprite2D" parent="Primercol"]
-position = Vector2(-0.5, 0)
+[node name="Bluesprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-46, -45)
 scale = Vector2(0.6875, 0.6875)
 texture = ExtResource("2_fj2qp")
 
-[node name="Iponecol" type="CollisionShape2D" parent="."]
+[node name="Iponecolission" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(-23, -45)
 shape = SubResource("RectangleShape2D_xl2cl")
-debug_color = Color(0.675306, 0.318368, 0.977423, 0.42)
+disabled = true
+debug_color = Color(0, 0.627637, 0.50001, 0.42)
 
-[node name="Sprite2D2" type="Sprite2D" parent="Iponecol"]
-position = Vector2(-0.203122, -0.712734)
+[node name="Iphonesprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-23.2031, -45.7127)
 scale = Vector2(0.309306, 0.329625)
 texture = ExtResource("3_wr7j4")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-10, -10)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
