@@ -5,8 +5,6 @@ signal hit
 func _ready():
 	GHUD.mob_counter = GHUD.mob_counter + 1
 	var collisions = [
-		$bluecolission,
-		$Iponecolission,
 		$Roca1Collision,
 		$Roca2colission,
 		$Roca3colission,
@@ -14,8 +12,6 @@ func _ready():
 		$Roca5colission
 	]
 	var sprite = [
-		$Bluesprite,
-		$Iphonesprite,
 		$Roca1sprite,
 		$Roca2sprite,
 		$Roca3sprite,

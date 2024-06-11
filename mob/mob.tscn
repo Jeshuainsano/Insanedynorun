@@ -1,48 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://h8b4f2kt570o"]
+[gd_scene load_steps=7 format=3 uid="uid://h8b4f2kt570o"]
 
 [ext_resource type="Script" path="res://mob/mob.gd" id="1_xrnhp"]
-[ext_resource type="Texture2D" uid="uid://bm7dnrtqcw352" path="res://icon.svg" id="2_fj2qp"]
-[ext_resource type="Texture2D" uid="uid://hbb1oitsires" path="res://mob/iPhone-15-Pro-Max.png" id="3_wr7j4"]
 [ext_resource type="Texture2D" uid="uid://bwj5f2ao6thlh" path="res://mob/r1.png" id="4_lwcme"]
 [ext_resource type="Texture2D" uid="uid://dg5abjeyujno4" path="res://mob/r2.png" id="5_wr3bw"]
 [ext_resource type="Texture2D" uid="uid://bh4djrp6s6lir" path="res://mob/r3.png" id="6_6r8gd"]
 [ext_resource type="Texture2D" uid="uid://b7enyhaocphlb" path="res://mob/r4.png" id="7_bfln8"]
 [ext_resource type="Texture2D" uid="uid://xawucw7ddu5p" path="res://mob/r5.png" id="8_jgwl7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rigjf"]
-size = Vector2(91, 90)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xl2cl"]
-size = Vector2(46, 88)
-
 [node name="MOB" type="Area2D"]
 script = ExtResource("1_xrnhp")
-
-[node name="bluecolission" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-45.5, -45)
-shape = SubResource("RectangleShape2D_rigjf")
-disabled = true
-debug_color = Color(0.923759, 0.244796, 0.330617, 0.42)
-
-[node name="Bluesprite" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-46, -45)
-scale = Vector2(0.6875, 0.6875)
-texture = ExtResource("2_fj2qp")
-
-[node name="Iponecolission" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-23, -45)
-shape = SubResource("RectangleShape2D_xl2cl")
-disabled = true
-debug_color = Color(0, 0.627637, 0.50001, 0.42)
-
-[node name="Iphonesprite" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-23.2031, -45.7127)
-scale = Vector2(0.309306, 0.329625)
-texture = ExtResource("3_wr7j4")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(-10, -10)

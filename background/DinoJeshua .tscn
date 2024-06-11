@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ciks6a1peqkk2" path="res://background/plx-3.png" id="3_opxx4"]
 [ext_resource type="Texture2D" uid="uid://p3khol2e2v7j" path="res://background/plx-4.png" id="4_wulw8"]
 [ext_resource type="Texture2D" uid="uid://cixh8k4sogtyi" path="res://background/plx-5.png" id="5_7wh8m"]
-[ext_resource type="Texture2D" uid="uid://if77i4yjo1cp" path="res://floor/floor.png" id="6_f1upt"]
+[ext_resource type="Texture2D" uid="uid://dnf6rm738bgxm" path="res://floor/suelo alv.png" id="6_x78y5"]
 
 [node name="Background" type="ParallaxBackground"]
 
@@ -55,7 +55,7 @@ motion_scale = Vector2(1, 0)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="fifthspryte" type="Sprite2D" parent="fifthlayer"]
-position = Vector2(0, 586)
-scale = Vector2(0.99941, 0.974126)
-texture = ExtResource("6_f1upt")
+position = Vector2(1, 373)
+scale = Vector2(1.27889, 0.974126)
+texture = ExtResource("6_x78y5")
 centered = false

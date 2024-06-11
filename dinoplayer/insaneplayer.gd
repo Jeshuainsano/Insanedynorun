@@ -24,4 +24,4 @@ func _physics_process(delta):
 		$Runcolisionshape2d.disabled = !$CollisionShape2D.disabled
 		move_and_slide()
 	else:
-			$AnimatedSprite2D
+			$AnimatedSprite2D.stop()
