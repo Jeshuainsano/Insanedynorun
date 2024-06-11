@@ -11,12 +11,7 @@ func update_score_label():
 	Score = Score + 10
 	$ScoreLabel.text = "Score: %d"%(Score)
 	
-func _on_button_pressed():
-	Score = 0
-	start_game_btn.emit()
-	is_playing = true
-	$ScoreTimer.start()
-	$Button.visible = false
+
 	
 
 func update_highscore_label():
@@ -27,7 +22,12 @@ func update_highscore_label():
 	$ScoreTimer.stop()
 	$Button.visible = true
 
-
+func _on_button_pressed():
+	Score = 0
+	start_game_btn.emit()
+	is_playing = true
+	$ScoreTimer.start()
+	$Button.visible = false
 
 func _on_score_timer_timeout():
 	update_score_label()

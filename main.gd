@@ -31,5 +31,4 @@ func _on_mob_timer_timeout():
 		mob.position.y = 602
 		add_child(mob)
 		mob.hit.connect(game_over)
-	print(GHUD.mob_counter)
 
